@@ -1,10 +1,11 @@
-from django.shortcuts import render, redirect
-from .models import Product
+from django.shortcuts import render
+from .models import Product, Category
 
 def home(request):
     products = Product.objects.all()
+    categories = Category.objects.all()  
     context = {
-        'products': products
+        'products': products,
+        'categories': categories,        
     }
     return render(request, 'index.html', context)
-

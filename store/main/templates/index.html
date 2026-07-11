@@ -3,6 +3,21 @@
 {% block title %}Каталог{% endblock %}
 
 {% block content %}
+<header class="header">
+    <div class="container d-flex justify-content-between align-items-center">
+        <h1>ovvvll</h1>
+        <nav>
+            <ul class="nav">
+                {% for category in categories %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{ category.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
+
 <div class="container">
     <h1 class="text-center my-4">🔥 Наши товары</h1>
     <div class="row">
