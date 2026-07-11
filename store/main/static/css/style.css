@@ -1,4 +1,17 @@
-body {
-    background-color: #00e1ff;
-    background: linear-gradient(to right, #00e1ff, #000000);
+.card {
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.card-img-top {
+    border-radius: 8px 8px 0 0;
+}
+.btn-dark {
+    background: #1a1a1a;
+    border: none;
+}
+.btn-dark:hover {
+    background: #333;
 }
