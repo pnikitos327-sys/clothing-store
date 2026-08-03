@@ -4,7 +4,6 @@
 
 {% block content %}
 
-<!-- ===== КАТЕГОРИИ (ПРЯМО ЗДЕСЬ) ===== -->
 <nav class="navbar navbar-expand-lg bg-light mb-4">
     <div class="container">
         <ul class="navbar-nav">
@@ -23,9 +22,14 @@
     </div>
 </nav>
 
-<!-- ===== ТОВАРЫ ===== -->
+<div class="container text-end mb-3">
+    <a href="{% url 'cart' %}" class="btn btn-success">
+        🛒 Перейти в корзину
+    </a>
+</div>
+
 <div class="container mt-4">
-    <h1 class="text-center my-4">🔥 Все товары</h1>
+    <h1 class="text-center my-4">Все товары</h1>
     <div class="row">
         {% for product in products %}
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
@@ -35,7 +39,7 @@
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p class="card-text text-muted small">{{ product.description|truncatewords:10 }}</p>
                         <p class="card-text fw-bold text-primary fs-5">{{ product.price }} ₽</p>
-                        <a href="#" class="btn btn-dark mt-auto">В корзину</a>
+                        <a href="{% url 'add_to_cart' product.id %}" class="btn btn-dark mt-auto">В корзину</a>
                     </div>
                 </div>
             </div>
