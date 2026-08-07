@@ -10,7 +10,7 @@
 <body>
     </html><div class="forms">
     <div class="card shadow" style="width: 100%; max-width: 500px; padding: 20px;">
-        <h2 class="text-center">Регистрация</h2>
+        <h2 class="text-center">Вход</h2>
         <form method="post">
             {% csrf_token %}
             <div class="mb-3">
@@ -25,14 +25,14 @@
                 <label for="id_password2" class="form-label">Подтверждение пароля</label>
                 <input type="password" name="password2" class="form-control" id="id_password2" required>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Зарегистрироваться</button>
+            <button type="submit" class="btn btn-primary w-100">Войти</button>
 
-
+            
             <div style="display: flex; gap: 10px; align-items: center; margin: 10px;">
-            <span>Уже есть аккаунт ?</span>
-            <a href="{% url 'login' %}">Войти</a>
+            <span>Еще нет аккаунта?</span>
+            <a href="{% url 'register' %}">Зарегистрироваться</a>
             </div>
-
+            
         </form>
         {% if form.errors %}
             <div class="alert alert-danger mt-3">
