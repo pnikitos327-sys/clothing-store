@@ -19,7 +19,6 @@
     </div>
 </nav>
 
-<!-- ===== СТРАНИЦА КАТЕГОРИИ ===== -->
 <div class="container mt-4">
     <div class="row">
         <div class="col-3">
@@ -46,8 +45,8 @@
                                 <h5 class="card-title">{{ product.name }}</h5>
                                 <p class="card-text text-muted small">{{ product.description|truncatewords:10 }}</p>
                                 <p class="card-text fw-bold text-primary fs-5">{{ product.price }} ₽</p>
-                                <a href="#" class="btn btn-dark mt-auto">В корзину</a>
-                            </div>
+                                <a href="{% url 'add_to_cart' product.id %}" class="btn btn-dark mt-auto">В корзину</a>
+                                </div>
                         </div>
                     </div>
                 {% empty %}

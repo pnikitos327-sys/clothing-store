@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_password_eye',
     'main',
 ]
+
+DJANGO_PASSWORD_EYE_INCLUDE_FONT_AWESOME = False
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
