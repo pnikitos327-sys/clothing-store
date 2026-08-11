@@ -11,7 +11,6 @@ body {
     padding: 15px 0;
     text-align: center;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-    
 }
 .header h1 {
     margin: 0;
@@ -55,7 +54,11 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 .card-img-top {
-    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 600 / 866;
+    object-fit: contain;
+    background-color: #f4f4f4;
 }
 .card-body {
     padding: 15px;
@@ -71,10 +74,6 @@ body {
 
 header {
     height: 100px;
-  }
-
-home {
-    font-size: 24px;
 }
 
 .forms {
@@ -82,5 +81,4 @@ home {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    
 }

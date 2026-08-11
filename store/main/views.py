@@ -59,3 +59,6 @@ def cart_view(request):
         items = []
         total = 0
     return render(request, 'cart.html', {'items': items, 'total': total})
+
+def product_delait(request):
+    return render (request, 'product.html')
