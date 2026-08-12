@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import authenticate, login
-from .models import Product, Category, Cart, CartItem
+from .models import Product, Category, Cart, CartItem, ProductImage
 from .forms import RegistrationForm
 
 def registersion_view(request):
@@ -60,5 +60,10 @@ def cart_view(request):
         total = 0
     return render(request, 'cart.html', {'items': items, 'total': total})
 
-def product_delait(request):
-    return render (request, 'product.html')
+def product_delait(request, slug):
+    product = get_object_or_404(Product, slug=slug)
+    images = ProductImage.objects.filter(product=product)  
+    return render(request, 'product.html', {
+        'product': product,
+        'images': images,
+    })
