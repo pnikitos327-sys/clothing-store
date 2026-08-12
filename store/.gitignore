@@ -1,0 +1,52 @@
+# Виртуальное окружение
+venv/
+env/
+.env/
+.venv/
+
+# База данных
+db.sqlite3
+*.sqlite3
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Логи
+*.log
+*.log.*
+
+# Настройки с секретами (если есть)
+*.env
+*.secret
+config/settings/local.py
+
+# Файлы IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Отчеты покрытия тестами
+coverage/
+htmlcov/
+.tox/
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Билды
+*.egg-info/
+dist/
+build/
+*.egg
+
+db.sqlite3
+media/
