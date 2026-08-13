@@ -86,7 +86,14 @@ a {
   text-decoration: none;
 }
 .book {
-    display: flex;
-    align-items: flex-start;
+    
     margin-left: 1000px; 
+   
+}
+.baby {
+position: absolute;
+top: 163px;
+right: -550px; 
+
+
 }
