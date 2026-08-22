@@ -14,7 +14,7 @@ class Product(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True)
     image = models.ImageField(upload_to='products/')
-    description = models.TextField() 
+    description = models.TextField(max_length=200, blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     available = models.BooleanField(default=True)
     def __str__(self):
